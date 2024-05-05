@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Liste Motos
+{% endblock %}
+
+{% block body %}
+
+	{% for moto in motos %}
+		<li>
+			<a 
+            href={{ path('moto_details', {id:moto.id} )}}
+            >{{ moto.id}} : {{ moto.marque | capitalize}} {{ moto.nom | capitalize}}
+            </a>
+
+
+			<a href={{ path('moto_delete', {id:moto.id}) }}>Delete</a>
+
+		</li>
+	{% else %}
+		<p>Pas de Motos</p>
+	{% endfor %}
+{% endblock %}

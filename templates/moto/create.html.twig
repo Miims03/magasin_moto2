@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Create Moto
+{% endblock %}
+
+{% block body %}
+    <h1>Ajouter dans la liste</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.marque) }}
+        {{ form_row(form.nom) }}
+        {{ form_row(form.couleur) }}
+        {{ form_row(form.prix) }}
+        {{ form_row(form.annee) }}
+        {{ form_row(form.button,{"label":"Ajouter"}) }}
+    {{ form_end(form) }}
+{% endblock %}

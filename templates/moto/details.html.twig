@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Détails Moto
+{% endblock %}
+
+{% block body %}
+
+    <h1>Détails Moto</h1>
+    <p>Marque : {{ moto.marque | capitalize}}</p>
+    <p>Nom : {{ moto.nom | capitalize}}</p>
+    <p>Couleur : {{ moto.couleur | capitalize}}</p>
+    <p>Prix : {{ moto.prix }} €</p>
+    <p>Année : {{ moto.annee }}</p>
+    <a href={{path('moto_edit',{id:moto.id})}}>Editer</a>
+{% endblock %}

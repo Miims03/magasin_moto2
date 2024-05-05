@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Edit Moto
+{% endblock %}
+
+{% block body %}
+    <h1>Modifier Moto</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.marque) }}
+        {{ form_row(form.nom) }}
+        {{ form_row(form.couleur) }}
+        {{ form_row(form.prix) }}
+        {{ form_row(form.annee) }}
+        {{ form_row(form.button,{"label":"Modifier"}) }}
+    {{ form_end(form) }}
+
+{% endblock %}
